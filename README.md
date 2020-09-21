@@ -1,6 +1,9 @@
 * 数据存储于链接: https://pan.baidu.com/s/1nudkCMEoiWg-gy8zRJURag  密码: g6ii
 
 数据说明：
+
+主要从dblp中爬取了三百多个期刊和会议（来源于Google matrics、ccf和清华计算机协会评定的a类计算机会议/期刊，列表存于“top_paper.xlsx”中），再从中获取dblp各期刊/会议有史以来录用的所有paper，以及从Google Scholar爬取若干计算机领域经典方向的前100名学者的列表，由学者的共同学者向下爬取相关的学者形成学者网络。这里存储了学者在Google Scholar中对应的profileid作为之后对应学者和论文的ID
+
 1、all_author_scholarlink：dblp中论文的学者的相关信息，包含affiliation/主页/等信息，信息较少，rank表示该作者在论文的共同作者中的排名分位（0-1）
 
 2、conf_chinese_scholar：主要包含高性能领域的会议相关论文的国内学者的相关信息，来源于ieeexplore
@@ -22,8 +25,6 @@
 10、top_scholar_paper_detail：由上一步的论文链接进一步爬取得到的论文详细信息数据
 
 	
-	
-description：主要从dblp中爬取了三百多个期刊和会议（来源于Google matrics、ccf和清华计算机协会评定的a类计算机会议/期刊，列表存于“top_paper.xlsx”中），再从中获取dblp各期刊/会议有史以来录用的所有paper，以及从Google Scholar爬取若干计算机领域经典方向的前100名学者的列表，由学者的共同学者向下爬取相关的学者形成学者网络。这里存储了学者在Google Scholar中对应的profileid作为之后对应学者和论文的ID
 
 1、code: crawl_dblp_conf/ crawl_dblp_journal
 按照top_paper中的title爬取dblp上的相应期刊/会议的论文，会议/期刊的相关信息存储于conf_info/journal_info中，相应的论文信息存储于conf_paper/journal_paper中
